@@ -1,0 +1,9 @@
+image:
+  repository: mysql
+  tag: "8.0.36"
+  pullPolicy: IfNotPresent
+
+mysqlRootPassword: rootpass
+mysqlDatabase: specrank
+mysqlUser: sr_user
+mysqlPassword: userpass
