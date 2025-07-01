@@ -40,6 +40,9 @@ containerSecurityContext:
   enabled: true
   runAsUser: 1001
 
+networkPolicy:
+  enabled: false
+
 provisioning:
   enabled: false
   serviceAccount:
@@ -98,6 +101,9 @@ zookeeper:
   containerSecurityContext:
     enabled: true
     runAsUser: 1001
+
+  networkPolicy:
+    enabled: false
 
   provisioning:
     enabled: false
