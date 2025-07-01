@@ -1,4 +1,4 @@
-ㅍreplicaCount: 1
+replicaCount: 1
 
 auth:
   enabled: false
@@ -14,9 +14,9 @@ serviceAccount:
   create: true
   name: ""
 
-#####################################
-# (1) Kafka 브로커 공통 설정 덮어쓰기
-#####################################
+rbac:
+  create: true
+
 overrideConfiguration: |
   broker.id=0
   listeners=PLAINTEXT://0.0.0.0:9092
@@ -38,14 +38,16 @@ overrideConfiguration: |
   zookeeper.connection.timeout.ms=18000
   group.initial.rebalance.delay.ms=0
 
-#####################################
-# (2) Zookeeper 설정
-#####################################
 zookeeper:
   enabled: true
   replicaCount: 1
   auth:
     enabled: false
+  serviceAccount:
+    create: true
+    name: ""
+  rbac:
+    create: true
   overrideConfiguration: |
     dataDir=/tmp/zookeeper
     clientPort=2181
