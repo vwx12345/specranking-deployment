@@ -3,6 +3,9 @@ replicaCount: 1
 controller:
   replicaCount: 1
 
+kraft:
+  enabled: false
+
 image:
   tag: "3.6.1-debian-12-r0"
 
@@ -56,7 +59,6 @@ provisioning:
     create: true
     name: ""
 
-# Kafka server.properties override
 overrideConfiguration: |
   broker.id=0
   listeners=PLAINTEXT://0.0.0.0:9092
