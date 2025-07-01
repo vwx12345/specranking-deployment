@@ -10,6 +10,10 @@ listeners:
   client:
     protocol: PLAINTEXT
 
+serviceAccount:
+  create: true
+  name: ""
+
 #####################################
 # (1) Kafka 브로커 공통 설정 덮어쓰기
 #####################################
