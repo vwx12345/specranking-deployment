@@ -31,6 +31,10 @@ logPersistence:
 metrics:
   kafka:
     enabled: false
+  jmx:
+    enabled: false
+  serviceMonitor:
+    enabled: false
 
 podSecurityContext:
   enabled: true
@@ -93,6 +97,10 @@ zookeeper:
 
   metrics:
     enabled: false
+    jmx:
+      enabled: false
+    serviceMonitor:
+      enabled: false
 
   podSecurityContext:
     enabled: true
